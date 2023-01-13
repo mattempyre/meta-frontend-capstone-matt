@@ -10,6 +10,9 @@
 	--dark-800: #333;
 	--white: #fff;
 	--dark: #000;
+
+	--font-title: 'Markazi Text', serif;
+	--font-body: 'Karla', sans-serif;
 }
 
 /* Reset */
@@ -31,7 +34,7 @@ h6 {
 }
 
 body {
-	font-family: 'Karla', sans-serif;
+	font-family: var(--font-body);
 	font-weight: 500;
 }
 
@@ -41,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Markazi Text', serif;
+	font-family: var(--font-title);
 	font-weight: 500;
 }
 

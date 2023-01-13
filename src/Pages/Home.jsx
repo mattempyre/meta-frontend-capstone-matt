@@ -1,10 +1,10 @@
-import { Fragment } from 'react';
-import { HeroContent, SpecialsItem, TestimonialItem } from '../Components';
+import { HeroBanner, TestimonialItem } from '../Components';
+import { Specials } from '../Components/Specials/Specials';
 
 export const HomePage = () => (
   <>
-    <HeroContent />
-    <SpecialsItem />
+    <HeroBanner />
+    <Specials />
     <TestimonialItem />
   </>
 );

@@ -4,6 +4,7 @@ header {
 }
 
 .header-content {
+	position: relative;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -25,6 +26,36 @@ header {
 
 .nav-list a.active {
 	font-weight: 600;
+}
+
+nav .toggle-menu {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	nav .toggle-menu {
+		display: block;
+	}
+
+	nav .nav-list {
+		display: none;
+		position: absolute;
+		top: 4rem;
+		right: 0;
+		flex-direction: column;
+		background-color: var(--white);
+		border: 1px solid var(--dark-200);
+		z-index: 10;
+	}
+
+	nav .nav-list.active {
+		display: block;
+	}
+
+	nav .nav-list li {
+		margin-left: 0;
+		padding: 1rem;
+	}
 }
 
 /* Footer */

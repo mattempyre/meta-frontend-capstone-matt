@@ -1,9 +1,9 @@
-import { ConfirmedBooking } from '../Components';
+import { ConfirmedBooking } from '../Components'
 
 export const ConfirmationPage = () => {
-  return (
-    <div className='container'>
-      <ConfirmedBooking />
-    </div>
-  );
-};
+	return (
+		<div className="container">
+			<ConfirmedBooking />
+		</div>
+	)
+}

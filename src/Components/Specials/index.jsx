@@ -1,2 +1,2 @@
-export { Specials } from './Specials';
-export { SpecialsItem } from './SpecialsItem';
+export { Specials } from './Specials'
+export { SpecialsItem } from './SpecialsItem'

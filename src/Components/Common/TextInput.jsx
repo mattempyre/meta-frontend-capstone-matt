@@ -1,33 +1,36 @@
 export const TextInput = ({
-  type,
-  label,
-  name,
-  value,
-  touched,
-  errors,
-  handleChange,
-  ...rest
+	type,
+	label,
+	name,
+	value,
+	touched,
+	errors,
+	handleChange,
+	...rest
 }) => {
-  return (
-    <div className='input-group'>
-      <label htmlFor={name} className='input-label'>
-        {label}
-      </label>
+	return (
+		<div className={`input-group ${touched && errors ? 'error' : ''}`}>
+			<label htmlFor={name} className="input-label">
+				{label}
+			</label>
 
-      <input
-        className='input-control'
-        type={type}
-        id={name}
-        value={value}
-        onChange={handleChange}
-        {...rest}
-      />
+			<input
+				className="input-control"
+				type={type}
+				id={name}
+				name={name}
+				aria-label={name}
+				data-testid={name}
+				value={value}
+				onChange={handleChange}
+				{...rest}
+			/>
 
-      {touched && errors ? (
-        <div className='input-error' data-testid={`${name}-error`}>
-          {errors}
-        </div>
-      ) : null}
-    </div>
-  );
-};
+			{touched && errors ? (
+				<div className="input-error" data-testid={`${name}-error`}>
+					{errors}
+				</div>
+			) : null}
+		</div>
+	)
+}

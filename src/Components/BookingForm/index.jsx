@@ -65,7 +65,7 @@ export const BookingForm = ({
     <>
       <h1 className='booking-header'>Book A Table</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-testid='booking-form'>
         <TextInput
           type='date'
           label='Select date'
@@ -76,6 +76,7 @@ export const BookingForm = ({
           errors={errors.date}
           handleChange={changeTimeSlots}
           onBlur={handleBlur}
+          data-testid='date'
         />
 
         <SelectInput
@@ -102,6 +103,7 @@ export const BookingForm = ({
           value={values.guests}
           handleChange={handleChange}
           onBlur={handleBlur}
+          data-testid='guests'
         />
 
         <SelectInput

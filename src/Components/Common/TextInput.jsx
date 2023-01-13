@@ -23,7 +23,11 @@ export const TextInput = ({
         {...rest}
       />
 
-      {touched && errors ? <div className='input-error'>{errors}</div> : null}
+      {touched && errors ? (
+        <div className='input-error' data-testid={`${name}-error`}>
+          {errors}
+        </div>
+      ) : null}
     </div>
   );
 };

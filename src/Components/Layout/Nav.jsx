@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { Button } from '../Common';
@@ -8,8 +8,23 @@ import './styles.css';
 export const Nav = () => {
   const [showNav, setShowNav] = useState(false);
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setShowNav(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [ref]);
+
   return (
-    <nav>
+    <nav ref={ref}>
       <Button
         variant='primary'
         classes='toggle-menu'
@@ -21,22 +36,34 @@ export const Nav = () => {
 
       <ul className={`nav-list flex ${showNav && 'active'}`}>
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/' onClick={() => setShowNav(false)}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/about'>About</NavLink>
+          <NavLink to='/about' onClick={() => setShowNav(false)}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/menu'>Menu</NavLink>
+          <NavLink to='/menu' onClick={() => setShowNav(false)}>
+            Menu
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/booking'>Reservations</NavLink>
+          <NavLink to='/booking' onClick={() => setShowNav(false)}>
+            Reservations
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/order'>Order Online</NavLink>
+          <NavLink to='/order' onClick={() => setShowNav(false)}>
+            Order Online
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/login'>Login</NavLink>
+          <NavLink to='/login' onClick={() => setShowNav(false)}>
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

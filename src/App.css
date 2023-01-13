@@ -1,0 +1,69 @@
+:root {
+    --color-primary: #495E57;
+    --color-secondary: #F4CE14;
+}
+#about {
+    padding: 6vh 0 16vh 0;
+    background-color: var(--color-primary);
+}
+#about h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+#about .container {
+    display: flex;
+}
+#about .image-container > img {
+    width: 16vw;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 16px;
+}
+#about .image-container {
+    position: relative;
+}
+#about .image-container > img:first-child {
+    position: relative;
+    top: 0;
+    left: -12vw;
+    z-index: 1;
+}
+#about .image-container > img:last-child {
+    position: absolute;
+    top: 14vh;
+    left: 0;
+}
+#about .content {
+    width: 50vw;
+}
+#about .content > p {
+    width: 20vw;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    line-height: 1.65;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#footer ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.85;
+}
+#footer ul > li:first-child {
+    font-weight: 500;
+}
+#footer ul > li {
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+#footer ul > li:hover {
+    font-weight: 500;
+}

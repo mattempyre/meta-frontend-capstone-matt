@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export const SpecialsItem = (props) => {
@@ -12,7 +13,9 @@ export const SpecialsItem = (props) => {
           <div className='specials-price'>${price}</div>
         </div>
         <div className='specials-description'>{description}</div>
-        <div className='specials-order-link'>Order a delivery</div>
+        <Link to='/' className='specials-order-link'>
+          Order a delivery
+        </Link>
       </div>
     </div>
   );

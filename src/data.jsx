@@ -1,27 +1,25 @@
-export const specials = [
-  {
-    id: 1,
-    name: 'Greek Salad',
-    image: 'assets/images/greek salad.jpg',
-    description:
-      'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ',
-    price: 12.99,
-  },
-  {
-    id: 2,
-    name: 'Bruchetta',
-    image: 'assets/images/bruchetta.png',
-    description:
-      'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. ',
-    price: 19.99,
-  },
-
-  {
-    id: 3,
-    name: 'Lemon Dessert',
-    image: 'assets/images/lemon dessert.jpg',
-    description:
-      'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
-    price: 15.99,
-  },
-];
+// temp
+export const seededRandom = function (seed) {
+  var m = 2 ** 35 - 31;
+  var a = 185852;
+  var s = seed % m;
+  return function () {
+    return (s = (s * a) % m) / m;
+  };
+};
+export const fetchAPI = function (date) {
+  let result = [];
+  let random = seededRandom(date.getDate());
+  for (let i = 17; i <= 23; i++) {
+    if (random() < 0.5) {
+      result.push(i + ':00');
+    }
+    if (random() < 0.5) {
+      result.push(i + ':30');
+    }
+  }
+  return result;
+};
+export const submitAPI = function (formData) {
+  return true;
+};

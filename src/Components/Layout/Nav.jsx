@@ -11,9 +11,10 @@ export const Nav = () => {
   return (
     <nav>
       <Button
-        type='primary'
+        variant='primary'
         classes='toggle-menu'
         handleClick={() => setShowNav((prev) => !prev)}
+        aria-label='toggles navigation on click'
       >
         <img src='/assets/images/hamburger.svg' alt='hamburger menu' />
       </Button>

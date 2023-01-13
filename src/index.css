@@ -52,6 +52,13 @@ ul {
 	list-style: none;
 }
 
+a,
+a:visited,
+a:hover {
+	color: var(--dark);
+	text-decoration: none;
+}
+
 /* Layout */
 .container {
 	width: 90%;

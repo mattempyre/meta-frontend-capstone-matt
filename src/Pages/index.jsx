@@ -1,2 +1,3 @@
-export { HomePage } from './Home';
-export { BookingPage } from './Booking';
+export { HomePage } from './HomePage';
+export { BookingPage } from './BookingPage';
+export { ConfirmationPage } from './ConfirmationPage';

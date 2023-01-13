@@ -12,7 +12,7 @@ export const HeroBanner = () => (
           We are family owned mediterranean restaurant, focussed on traditional
           recipes served with modern twist.
         </p>
-        <Button type='primary'>Reserve a Table</Button>
+        <Button variant='primary'>Reserve a Table</Button>
       </div>
       <img
         src='assets/images/hero.jpg'

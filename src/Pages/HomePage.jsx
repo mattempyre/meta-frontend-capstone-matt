@@ -1,9 +1,8 @@
-import { HeroBanner, Specials, TestimonialItem } from '../Components'
+import { HeroBanner, Specials } from '../Components';
 
 export const HomePage = () => (
-	<>
-		<HeroBanner />
-		<Specials />
-		<TestimonialItem />
-	</>
-)
+  <>
+    <HeroBanner />
+    <Specials />
+  </>
+);

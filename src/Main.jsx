@@ -35,11 +35,11 @@ export const Main = () => {
     initializeTimes()
   );
 
-  const submitForm = (e, formData) => {
-    e.preventDefault();
-
-    console.log(formData);
-    setAvailableTimes({ type: 'ADD_BOOKING', payload: formData.time });
+  const submitForm = (formData) => {
+    setAvailableTimes({
+      type: ACTION_TYPES.ADD_BOOKING,
+      payload: formData.time,
+    });
 
     const response = submitAPI(formData);
     if (response) navigate('/confirmation');

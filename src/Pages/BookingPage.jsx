@@ -7,7 +7,7 @@ export const BookingPage = ({
 }) => {
   return (
     <section id='booking' className='booking-section'>
-      <div className='container'>
+      <div className='container booking-container flex'>
         <BookingForm
           availableTimes={availableTimes}
           setAvailableTimes={setAvailableTimes}

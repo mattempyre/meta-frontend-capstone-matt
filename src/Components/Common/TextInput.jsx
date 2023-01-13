@@ -3,6 +3,8 @@ export const TextInput = ({
   label,
   name,
   value,
+  touched,
+  errors,
   handleChange,
   ...rest
 }) => {
@@ -11,6 +13,7 @@ export const TextInput = ({
       <label htmlFor={name} className='input-label'>
         {label}
       </label>
+
       <input
         className='input-control'
         type={type}
@@ -19,6 +22,8 @@ export const TextInput = ({
         onChange={handleChange}
         {...rest}
       />
+
+      {touched && errors ? <div className='input-error'>{errors}</div> : null}
     </div>
   );
 };

@@ -2,9 +2,15 @@ import { render, screen } from '@testing-library/react';
 
 import { BookingForm } from './';
 
-test('Renders the BookingForm heading', () => {
-  render(<BookingForm availableTimes={[]} />);
+describe('Booking Form', () => {
+  render(<BookingForm availableTimes={[{ value: '', label: '' }]} />);
 
-  const title = screen.getByText(/Table/i);
-  expect(title).toBeInTheDocument();
+  test('Renders the BookingForm heading', () => {
+    const title = screen.getByText(/Table/i);
+    expect(title).toBeInTheDocument();
+  });
+
+  test('Input HTML validation works', () => {
+    // 	.toHaveAttribute('required')
+  });
 });

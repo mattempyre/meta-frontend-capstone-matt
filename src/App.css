@@ -67,3 +67,79 @@
 #footer ul > li:hover {
     font-weight: 500;
 }
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+#footer ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.85;
+}
+#footer ul > li:first-child {
+    font-weight: 500;
+}
+#footer ul > li {
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+#footer ul > li:hover {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+     #about {
+        padding: 6vh 0;
+    }
+    #about h2 {
+        font-weight: 500;
+    }
+    #about .container {
+        display: block;
+    }
+    #about .content {
+        width: 90vw;
+    }
+    #about .content > p {
+        width: 90vw;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .image-container {
+        display: none;
+    }
+    #footer .container {
+        display: block;
+    }
+}
+
+/* tablets */
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
+    #about {
+        padding: 6vh 0;
+    }
+    #about .content {
+        width: 70vw;
+    }
+    #about .content > p {
+        width: 50vw;
+    }
+    #about .image-container > img {
+        width: 35vw;
+        height: 40vh;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    #about .image-container > img:first-child {
+        display: none;
+    }
+    #about .image-container > img:last-child {
+        position: static;
+    }
+}
